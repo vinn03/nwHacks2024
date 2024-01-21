@@ -2,7 +2,6 @@ import React from 'react';
 import LeafletMap from '../components/leafletmap';
 import { useLocation } from 'react-router-dom'
 import '../css/nav.css';
-import { isFunctionDeclaration } from 'typescript';
 
 function co2Production(carEfficiency){
     return carEfficiency * (8.99 * 10**(-3)/(100 * 3.785 * 0.993)) * 1000000
@@ -22,6 +21,8 @@ export default function Nav() {
     const routeRes = searchParams.get('routeRes');
 
     const co2 = co2Production(gas);
+
+    console.log(JSON.parse(routeRes));
     
 
     return (

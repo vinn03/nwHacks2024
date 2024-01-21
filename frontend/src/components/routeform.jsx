@@ -22,14 +22,18 @@ export default function RouteForm() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const startingPoint = formData.startingPoint;
         const destination = formData.destination;
         const gasConsumption = formData.gasConsumption;
 
-        const routeRes = routeCalc(startingPoint, destination, gasConsumption);
+        const routeRes = await routeCalc(startingPoint, destination);
 
-        const queryString = `?startingPoint=${startingPoint}&destination=${destination}&gasConsumption=${gasConsumption}&routeRes=${routeRes}`;
+        const properties = routeRes.features[0].properties;
+
+        console.log(JSON.stringify(properties, null, 2))
+
+        const queryString = `?startingPoint=${startingPoint}&destination=${destination}&gasConsumption=${gasConsumption}&routeRes=${JSON.stringify(properties, null, 2)}`;
         window.location.href = `/nav${queryString}`;
     };
 
