@@ -25,7 +25,14 @@ const colRef = collection(db, 'Fuel Consumption Coupe')
 
 getDocs(colRef)
   .then((snapshot) => {
-    console.log(snapshot.docs)
+    let FCCoupe = []
+    snapshot.docs.forEach((doc) => {
+        FCCoupe.push({...doc.data(), id: doc.id })
+    })
+    console.log(FCCoupe)
+    .catch(err =>{
+        console.log(err.message)
+    })
   })
 
 
