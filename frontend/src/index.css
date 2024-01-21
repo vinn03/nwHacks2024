@@ -1,5 +1,9 @@
 html {
   background-color: cadetblue;
+  background-image: url("../public/globe.gif");
+  background-position: center calc(50% + 19vh);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
