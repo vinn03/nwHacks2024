@@ -1,0 +1,66 @@
+#home {
+  background-color: cadetblue;
+  background-image: url("../../public/globe.gif");
+  background-position: center calc(50% + 19vh);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 4vh;
+}
+
+#home-header {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20vh;
+  background-color: beige;
+  width: 40%;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+/* .nav-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 20vw;
+  text-align: center;
+  padding: 2vh;
+
+
+  background-color: beige;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  opacity: 70%;
+
+} */
+
+#location-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%;
+  margin: auto;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 4vh;
+
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: rgb(245, 245, 220, 0.7);
+}
+
+#nav-button {
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1vh;
+  width: 10vw;
+  font-size: medium;
+}
