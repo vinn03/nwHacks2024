@@ -1,12 +1,9 @@
-.Nav {
-    position: relative; /* This is important for absolute positioning of child elements */
-}
-  
-.overlay-box {
-    position: absolute;
+.nav {
     background-color: beige;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }

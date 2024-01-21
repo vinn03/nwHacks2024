@@ -1,3 +1,13 @@
+#home {
+  background-color: cadetblue;
+  background-image: url("../../public/globe.gif");
+  background-position: center calc(50% + 19vh);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 4vh;
+}
+
 #home-header {
   margin: auto;
   display: flex;
@@ -6,7 +16,6 @@
   align-items: center;
 
   margin-bottom: 20vh;
-  margin-top: 4vh;
   background-color: beige;
   width: 40%;
   border-radius: 20px;
