@@ -1,5 +1,8 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import {initializeApp} from 'firebase/app'
+import {
+    getFirestore, collection, getDocs, getDocs
+} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCrbs-FJBu_oBISTdx_8DnM1JIz2rec1Kc",
@@ -11,4 +14,18 @@ const firebaseConfig = {
     measurementId: "G-1NCZD9R798"
   };
 
+// initialize firebase app
 initializeApp(firebaseConfig)
+
+// initialize firestone
+const db = getFirestore()
+const colRef = collection(db, 'Fuel Consumption Coupe')
+
+// get collection data
+
+getDocs(colRef)
+  .then((snapshot) => {
+    console.log(snapshot.docs)
+  })
+
+
