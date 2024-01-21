@@ -5,16 +5,16 @@ import Button from '@mui/material/Button';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
-import { Form, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { routeCalc } from './routecalc';
+
+    
 
 export default function RouteForm() {
     const [formData, setFormData] = useState({
-        // Initialize your form fields here
         startingPoint: '',
         destination: '',
-        gasConsumption: '',
-        // Add more fields as needed
+        gasConsumption: ''  
     });
 
     const handleInputChange = (e) => {
@@ -29,7 +29,8 @@ export default function RouteForm() {
 
         const routeRes = routeCalc(startingPoint, destination, gasConsumption);
 
-        return routeRes; // Exporting the routeRes variable
+        const queryString = `?startingPoint=${startingPoint}&destination=${destination}&gasConsumption=${gasConsumption}&routeRes=${routeRes}`;
+        window.location.href = `/nav${queryString}`;
     };
 
     return (
