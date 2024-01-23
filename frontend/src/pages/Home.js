@@ -6,7 +6,11 @@ export default function Home() {
   return (
     <div id="home">
       <header id="home-header">
-        <h1>Routemaxxer</h1>
+        <div>
+          <h1 id="header">ROUTEMAXXER</h1>
+          <p id="slogan"> The eco-friendly route finder</p>
+        </div>
+        
       </header>
       <div id="location-container">
         <RouteForm></RouteForm>
